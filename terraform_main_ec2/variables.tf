@@ -61,7 +61,7 @@ variable "instance_type" {
 variable "key_name" {
   description = "EC2 keypair"
   type        = string
-  default     = "us-west-1"
+  default     = "Ncalfor.pem"
 }
 
 variable "instance_name" {
