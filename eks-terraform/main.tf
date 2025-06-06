@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"  # Specify your desired region
+  region = "us-west-1"  # Specify your desired region
 }
 
  #Creating IAM role for EKS
@@ -113,7 +113,8 @@ provider "aws" {
  # data source 
  data "aws_vpc" "main" {
   tags = {
-    Name = "Jumphost-vpc"  # Specify the name of your existing VPC
+    name = "tag:Name"
+    values = ["Jumphost-vpc"]  # Specify the name of your existing VPC
   }
 }
 
